@@ -183,13 +183,10 @@ It is lightweight and can be easily customized to add more commands as per your 
 
 ## Self Hosting Guide
 
-### Deploye in Termux/Ubuntu/Vps/Rdp
+### Deploye in Termux/Ubuntu
    
 ```
-pkg update && pkg upgrade -y
-```
-```
-pkg install proot-distro
+pkg update && pkg upgrade -y && pkg install proot-distro -y
 ```
 ```
 proot-distro install ubuntu
@@ -198,27 +195,18 @@ proot-distro install ubuntu
 proot-distro login ubuntu
 ```
 ```
-apt update && apt upgrade -y
-```
-```
-apt install -y webp git ffmpeg curl imagemagick
-```
-```
-apt -y remove nodejs
-curl -fsSl https://deb.nodesource.com/setup_20.x | bash - && apt -y install nodejs
+apt update && apt upgrade -y && apt install -y git ffmpeg build-essential libvips-dev curl webp nodejs npm
 ```
 ```
 git clone https://github.com/<your gitHub Username>/MEGA-MD
 cd MEGA-MD
 ```
 ```
-npm install
+npm install && npm start
 ```
-```
-npm start
-```
-
 ---
+
+- Note if npm throws error just exit from ubuntu terminal and login again then `cd MEGA-MD && npm install`
 
 
 ## License
